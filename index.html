@@ -196,7 +196,7 @@ function show(view){
 }
 function bindGoto(){document.querySelectorAll('[data-goto]').forEach(function(a){a.onclick=function(e){e.preventDefault();show(a.dataset.goto)}})}
 document.querySelectorAll('#mainNav [data-view]').forEach(function(t){t.addEventListener('click',function(){cat='All';document.querySelectorAll('[data-cat]').forEach(function(x){x.setAttribute('aria-selected',x.dataset.cat==='All'?'true':'false')});show(t.dataset.view);render()})});
-document.querySelectorAll('[data-cat]').forEach(function(t){t.addEventListener('click',function(){show('home');cat=t.dataset.cat;document.querySelectorAll('[data-cat]').forEach(function(x){x.setAttribute('aria-selected',x===t?"true":"false")});render()})});
+document.querySelectorAll('[data-cat]').forEach(function(t){t.addEventListener('click',function(){cat=t.dataset.cat;document.querySelectorAll('[data-cat]').forEach(function(x){x.setAttribute('aria-selected',x===t?"true":"false")});document.querySelectorAll('.view').forEach(function(v){v.classList.remove('active')});document.getElementById('view-home').classList.add('active');render();document.getElementById('sectionTitle').scrollIntoView({behavior:'smooth',block:'start'})})});
 document.getElementById('q').addEventListener('input',render);
 document.getElementById('clearQ').addEventListener('click',function(){document.getElementById('q').value="";render()});
 function download(name,content,type){var b=new Blob([content],{type:type||"text/plain"});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;a.click();setTimeout(function(){URL.revokeObjectURL(a.href)},2000)}
