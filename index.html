@@ -11,12 +11,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Newsreader:opsz,wght@6..72,500;6..72,700;6..72,800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5355312476298022" crossorigin="anonymous"></script>
 <style>
-:root{--bg:#ffffff;--ink:#111111;--muted:#666666;--accent:#15803d;--accent2:#7c3aed;--line:#e5e5e5;--line-dark:#111111}
+:root{--bg:#ffffff;--ink:#111111;--muted:#666666;--accent:#15803d;--accent2:#15803d;--line:#e5e5e5;--line-dark:#111111}
 *{box-sizing:border-box} html{scroll-behavior:smooth}
 body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
 a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px 48px}
-header.site{border-top:6px solid transparent;border-image:linear-gradient(90deg,#15803d,#22c55e,#7c3aed) 1;border-bottom:3px solid var(--line-dark);background:#fff;position:sticky;top:0;z-index:20}
+header.site{border-top:6px solid transparent;border-image:linear-gradient(90deg,#052e16,#15803d,#22c55e,#a3e635) 1;border-bottom:3px solid var(--line-dark);background:#fff;position:sticky;top:0;z-index:20}
 .hwrap{max-width:1080px;margin:0 auto;padding:20px 20px 0;text-align:center}
 .wordmark{font-family:Newsreader,Georgia,serif;font-weight:800;font-size:clamp(38px,7vw,64px);line-height:1;letter-spacing:-.5px}
 .tagline{font-size:15px;color:var(--muted);margin:8px 0 16px}
@@ -26,8 +26,8 @@ nav.tabs{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;padding:10p
 .snapshot{border:1px solid var(--line);background:#f7f7f7;padding:10px 14px;font-size:13px;margin:20px 0;color:var(--muted)}
 .searchrow{display:flex;gap:10px;max-width:640px;margin:24px auto}
 .searchrow input{flex:1;padding:13px 20px;border:1px solid #ccc;border-radius:999px;background:#fff;color:var(--ink);font:inherit;outline:none}
-.searchrow input:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(124,58,237,.15)}
-.btn{border:1px solid var(--line-dark);background:linear-gradient(90deg,#15803d,#7c3aed);color:#fff;padding:11px 18px;font-weight:600;cursor:pointer;border-radius:999px;font:inherit;text-decoration:none;display:inline-block}
+.searchrow input:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(34,197,94,.25)}
+.btn{border:1px solid var(--line-dark);background:linear-gradient(90deg,#15803d,#22c55e);color:#fff;padding:11px 18px;font-weight:600;cursor:pointer;border-radius:999px;font:inherit;text-decoration:none;display:inline-block}
 .btn.alt{background:#fff;color:var(--ink)}
 .ad{border:1px solid var(--line);background:#f7f7f7;text-align:center;padding:16px;margin:20px 0}
 .ad small{letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted);font-size:11px} .ad b{display:block;font-size:18px;margin:6px 0} .ad a{font-weight:700;color:var(--accent2)}
@@ -53,23 +53,31 @@ footer a{font-weight:700}
 @media (prefers-color-scheme:dark){:root{--bg:#111111;--ink:#f2f2f2;--muted:#aaaaaa;--line:#2a2a2a;--line-dark:#f2f2f2} header.site{background:#111} .snapshot,.ad,.panel{background:#1a1a1a} .btn{background:#f2f2f2;color:#111} .btn.alt{background:#111;color:#f2f2f2} pre{background:#000}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
-.wordmark{text-shadow:1px 2px 0 rgba(21,128,61,.18),3px 4px 10px rgba(124,58,237,.22)}
+.wordmark{text-shadow:2px 2px 0 #111,4px 4px 0 rgba(34,197,94,.35)}
 .lead h1{text-shadow:0 1px 0 rgba(0,0,0,.04)}
 header.site{box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .card{transition:background .15s ease}
 .card:hover{background:#fafafa}
 .card h3 a, .card h3{transition:color .15s ease}
-.card:hover h3{color:#7c3aed}
+.card:hover h3{color:#15803d}
 .btn{transition:transform .15s ease,box-shadow .15s ease}
-.btn:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(124,58,237,.25)}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 #052e16,0 8px 14px rgba(21,128,61,.25)}
 .tab:hover{color:#15803d}
 .searchrow input{box-shadow:0 2px 10px rgba(0,0,0,.05)}
+
+.wordmark{font-family:Bungee,Newsreader,Georgia,serif;letter-spacing:0}
+body{background-image:radial-gradient(#dcfce7 1.2px,transparent 1.2px);background-size:22px 22px}
+header.site{border-bottom:4px solid #111}
+.btn{border:2px solid #111;box-shadow:3px 3px 0 #111}
+.btn:hover{box-shadow:5px 5px 0 #111}
+.ad{border:2px solid #111;box-shadow:4px 4px 0 #bbf7d0}
+.snapshot{border:2px solid #111}
 </style>
 </head>
 <body>
 
 <header class="site"><div class="hwrap">
-<div class="wordmark"><span style="color:#15803d">Trichome</span> <span style="color:#7c3aed">Zone</span></div>
+<div class="wordmark"><span style="color:#15803d">Trichome</span> <span style="color:#22c55e">Zone</span></div>
 <p class="tagline">Daily cannabis industry news — policy, business, markets &amp; science, US &amp; worldwide.</p>
 <nav class="tabs" id="mainNav" aria-label="Sections">
 <button class="tab" data-view="home" aria-selected="true">📰 Latest News</button>
