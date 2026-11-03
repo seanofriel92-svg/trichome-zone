@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="color-scheme" content="light dark"/>
 <meta name="description" content="Trichome Zone — cannabis industry news: US policy & regulation, business & markets, international, and science & health. On trichomezone.com"/>
-<link rel="icon" href="data:,"/>
+<link rel="icon" type="image/png" href="favicon.png">
 <title>Trichome Zone | Cannabis Industry News</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Newsreader:opsz,wght@6..72,500;6..72,700;6..72,800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,15 +13,15 @@
 <style>
 :root{--bg:#ffffff;--ink:#111111;--muted:#222222;--accent:#15803d;--accent2:#15803d;--line:#e5e5e5;--line-dark:#111111}
 *{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+body{font-family:Georgia,'Times New Roman',serif;margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
 a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px 48px}
 header.site{border-top:6px solid transparent;border-image:linear-gradient(90deg,#052e16,#15803d,#22c55e,#a3e635) 1;border-bottom:3px solid var(--line-dark);background:#fff;position:sticky;top:0;z-index:20}
 .hwrap{max-width:1080px;margin:0 auto;padding:20px 20px 0;text-align:center}
-.wordmark{font-family:Newsreader,Georgia,serif;font-weight:800;font-size:clamp(38px,7vw,64px);line-height:1;letter-spacing:-.5px}
+.wordmark{font-family:Georgia,"Times New Roman",serif;font-size:clamp(36px,6vw,64px);font-weight:800;line-height:1;text-transform:uppercase}
 .tagline{font-size:15px;color:var(--muted);margin:8px 0 16px}
 nav.tabs{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;padding:10px 0 14px;border-top:1px solid var(--line)}
-.tab{border:0;background:none;padding:4px 0;font-weight:600;cursor:pointer;font-size:14px;color:var(--muted)}
+.tab{font-family:Georgia,'Times New Roman',serif;border:0;background:none;padding:4px 0;font-weight:600;cursor:pointer;font-size:14px;color:var(--muted)}
 .tab[aria-selected="true"]{color:var(--ink);border-bottom:2px solid var(--accent2)}
 .snapshot{border:1px solid var(--line);background:#f7f7f7;padding:10px 14px;font-size:13px;margin:20px 0;color:var(--muted)}
 .searchrow{display:flex;gap:10px;max-width:640px;margin:24px auto}
@@ -30,14 +30,14 @@ nav.tabs{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;padding:10p
 .btn{border:1px solid var(--line-dark);background:linear-gradient(90deg,#15803d,#22c55e);color:#fff;padding:11px 18px;font-weight:600;cursor:pointer;border-radius:999px;font:inherit;text-decoration:none;display:inline-block}
 .btn.alt{background:#fff;color:var(--ink)}
 .ad{border:1px solid var(--line);background:#f7f7f7;text-align:center;padding:16px;margin:20px 0}
-.hero{margin:20px 0 0}.hero img{width:100%;height:360px;object-fit:cover;display:block;border:3px solid #111}.hero figcaption{font-size:12px;color:#222;text-align:right;padding:6px 2px}
+.hero{margin:20px 0 0}.hero img{width:100%;max-width:520px;height:auto;object-fit:contain;display:block;margin:0 auto;border:3px solid #111}.hero figcaption{font-size:12px;color:#222;text-align:right;padding:6px 2px}
 .ad small{letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted);font-size:11px} .ad b{display:block;font-size:18px;margin:6px 0} .ad a{font-weight:700;color:var(--accent2)}
 .lead{padding:28px 0 24px;border-bottom:3px solid var(--line-dark);margin:8px 0 0}
-.lead h1{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:clamp(34px,5vw,50px);line-height:1.15;margin:10px 0;font-weight:900;color:#000}
+.lead h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,5vw,50px);line-height:1.2;margin:10px 0;font-weight:800;color:#000}
 .chip{display:inline-block;font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
 .grid{display:block}
 .card{border-bottom:1px solid var(--line);padding:20px 0;background:none}
-.card h3{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:27px;line-height:1.25;margin:0;font-weight:800;color:#000}
+.card h3{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.3;margin:0;font-weight:700;color:#000}
 .card p{margin:8px 0;color:var(--muted);line-height:1.55;font-size:16px}
 .meta{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .read{font-weight:700;color:var(--accent2);text-decoration:none}
@@ -65,7 +65,7 @@ header.site{box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .tab:hover{color:#15803d}
 .searchrow input{box-shadow:0 2px 10px rgba(0,0,0,.05)}
 
-.wordmark{font-family:Anton,system-ui,sans-serif;letter-spacing:1px}
+.wordmark{font-family:Impact,"Arial Black",Anton,system-ui,sans-serif;letter-spacing:1px;text-transform:uppercase}.wordmark a{color:inherit;text-decoration:none}
 body{background:#ffffff}
 header.site{border-bottom:4px solid #111}
 .btn{border:2px solid #111;box-shadow:3px 3px 0 #111}
@@ -77,33 +77,26 @@ header.site{border-bottom:4px solid #111}
 <body>
 
 <header class="site"><div class="hwrap">
-<div class="wordmark"><span style="color:#14532d">Trichome</span> <span style="color:#15803d">Zone</span></div>
+<div class="wordmark"><a href="#" data-goto="home" aria-label="Go to homepage"><span style="color:#14532d">Trichome Zone</span></a></div>
 <p class="tagline">Daily cannabis industry news — policy, business, markets &amp; science, US &amp; worldwide.</p>
 <nav class="tabs" id="mainNav" aria-label="Sections">
 <button class="tab" data-view="home" aria-selected="true">📰 Latest News</button>
-<button class="tab" data-view="advertise" aria-selected="false">Advertise</button>
-<button class="tab" data-view="adsense" aria-selected="false">AdSense</button>
-<button class="tab" data-view="deploy" aria-selected="false">🚀 Launch on Cloudflare</button>
-<button class="tab" data-view="about" aria-selected="false">About</button>
-<button class="tab" data-view="privacy" aria-selected="false">Privacy Policy</button>
-</nav></div></header>
-
-<div class="wrap">
-<!-- HOME -->
-<div class="view active" id="view-home">
-<figure class="hero"><img src="images/photo-1.jpg" alt="Close-up of cannabis flower showing trichomes"><figcaption>Photo by Sean O'Friel</figcaption></figure>
-<div class="ad" role="complementary" aria-label="Advertisement"><small>Advertisement · Leaderboard 728×90</small><b>YOUR AD HERE</b><span>AdSense connected (ca-pub-…8022) — units appear once slot IDs are added &amp; Google approves trichomezone.com.</span><br><a href="#" data-goto="advertise">Advertise with us →</a></div>
-
-<div class="snapshot">📸 <strong>Updated edition</strong> — headlines gathered Tue, Nov 3, 2026, for the GitHub Pages site. This static version doesn't auto-refresh: ask Baseline to rebuild it to update the news. Every headline links to the original publisher.</div>
-
-<div class="searchrow"><input id="q" type="search" placeholder="Search headlines… e.g. hemp, Germany, stocks, heart" aria-label="Search headlines"><button class="btn alt" id="clearQ">Clear</button></div>
-<nav class="tabs" id="catNav" aria-label="News categories">
 <button class="tab" data-cat="All" aria-selected="true">All</button>
 <button class="tab" data-cat="US Policy & Regulation" aria-selected="false">US Policy &amp; Regulation</button>
 <button class="tab" data-cat="Business & Markets" aria-selected="false">Business &amp; Markets</button>
 <button class="tab" data-cat="International" aria-selected="false">International</button>
 <button class="tab" data-cat="Science & Health" aria-selected="false">Science &amp; Health</button>
-</nav>
+</nav></div></header>
+
+<div class="wrap">
+<!-- HOME -->
+<div class="view active" id="view-home">
+
+
+<div class="ad" role="complementary" aria-label="Advertisement"><small>Advertisement · Leaderboard 728×90</small><b>YOUR AD HERE</b><span>AdSense connected (ca-pub-…8022) — units appear once slot IDs are added &amp; Google approves trichomezone.com.</span><br><a href="#" data-goto="advertise">Advertise with us →</a></div>
+<figure class="hero"><img src="images/photo-1.jpg" alt="Close-up of cannabis flower showing trichomes"><figcaption>Photo by Sean O'Friel</figcaption></figure><div class="snapshot">📸 <strong>Updated edition</strong> — headlines gathered Tue, Nov 3, 2026, for the GitHub Pages site. This static version doesn't auto-refresh: ask Baseline to rebuild it to update the news. Every headline links to the original publisher.</div>
+
+<div class="searchrow"><input id="q" type="search" placeholder="Search headlines… e.g. hemp, Germany, stocks, heart" aria-label="Search headlines"><button class="btn alt" id="clearQ">Clear</button></div>
 <div id="feed"></div>
 <p id="empty" style="display:none;font-weight:700">No stories match that search. Try a different word.</p>
 </div>
@@ -201,7 +194,7 @@ function show(view){
 }
 function bindGoto(){document.querySelectorAll('[data-goto]').forEach(function(a){a.onclick=function(e){e.preventDefault();show(a.dataset.goto)}})}
 document.querySelectorAll('#mainNav .tab').forEach(function(t){t.addEventListener('click',function(){show(t.dataset.view)})});
-document.querySelectorAll('#catNav .tab').forEach(function(t){t.addEventListener('click',function(){cat=t.dataset.cat;document.querySelectorAll('#catNav .tab').forEach(function(x){x.setAttribute('aria-selected',x===t?"true":"false")});render()})});
+document.querySelectorAll('[data-cat]').forEach(function(t){t.addEventListener('click',function(){show('home');cat=t.dataset.cat;document.querySelectorAll('[data-cat]').forEach(function(x){x.setAttribute('aria-selected',x===t?"true":"false")});render()})});
 document.getElementById('q').addEventListener('input',render);
 document.getElementById('clearQ').addEventListener('click',function(){document.getElementById('q').value="";render()});
 function download(name,content,type){var b=new Blob([content],{type:type||"text/plain"});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;a.click();setTimeout(function(){URL.revokeObjectURL(a.href)},2000)}
