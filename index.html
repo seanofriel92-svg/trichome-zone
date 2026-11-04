@@ -80,8 +80,28 @@ article, .card{scroll-margin-top:200px}
 </head>
 <body>
 
-<header class="site">
-
+<header class="site"><div class="hwrap">
+<div class="wordmark" style="background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url('images/photo-1.jpg');background-size:cover;background-position:center 35%;padding:28px 24px;border-radius:10px;display:inline-block;text-shadow:0 2px 10px rgba(0,0,0,0.9)"><a href="#" data-goto="home" aria-label="Go to homepage"><span style="color:#c9a227">trichomezone</span><span style="color:#a855f7;text-shadow:0 0 12px rgba(168,85,247,.9),0 2px 6px rgba(0,0,0,0.9)">.com</span></a></div>
+<p class="tagline">Daily cannabis industry news — policy, business, markets &amp; science, US &amp; worldwide</p>
+</div></header>
+<div id="hempCountdown" style="background:linear-gradient(90deg,#14532d,#4c1d95);color:#fff;text-align:center;border-radius:12px;padding:16px;margin:20px auto;max-width:1080px">
+<div style="font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fde68a">Federal hemp ban deadline</div>
+<div style="font-size:22px;font-weight:800;margin:6px 0">Dec 11, 2026 — <span id="hempDays">calculating…</span></div>
+<div style="color:#e9d5ff;font-size:14px">The federal total-THC change and 0.4 mg per-container cap take effect Dec 11, 2026.</div>
+</div>
+<script>(function(){function u(){var d=new Date('2026-12-11T00:00:00-05:00')-new Date();var days=Math.max(0,Math.ceil(d/86400000));var el=document.getElementById('hempDays');if(el)el.textContent=days+' days to go';}u();setInterval(u,3600000);})();</script>
+<div class="wrap">
+<div class="view active" id="view-home">
+<nav class="tabs" id="mainNav" aria-label="Sections">
+<button class="tab" data-view="home" aria-selected="true">📰 Latest News</button>
+<button class="tab" data-cat="All" aria-selected="true">All</button>
+<button class="tab" data-cat="US Policy & Regulation" aria-selected="false">US Policy &amp; Regulation</button>
+<button class="tab" data-cat="Business & Markets" aria-selected="false">Business &amp; Markets</button>
+<button class="tab" data-cat="International" aria-selected="false">International</button>
+<button class="tab" data-cat="Science & Health" aria-selected="false">Science &amp; Health</button>
+<button class="tab" data-cat="New York" aria-selected="false">New York</button>
+</nav>
+<div class="ad" role="complementary" aria-label="Advertisement"><small>Advertisement · Leaderboard 728×90</small><b>YOUR AD HERE</b><span>AdSense connected (ca-pub-…8022) — units appear once slot IDs are added &amp; Google approves trichomezone.com.</span><br><a href="#" data-goto="advertise">Advertise with us →</a></div>
 <div class="searchrow"><input id="q" type="search" placeholder="Search headlines… e.g. hemp, Germany, stocks, heart" aria-label="Search headlines"><button class="btn alt" id="clearQ">Clear</button></div>
 <h2 id="sectionTitle" style="font-family:Georgia,'Times New Roman',serif;font-size:28px;margin:18px 0 4px">Latest News</h2><div id="feed"></div>
 <p id="empty" style="display:none;font-weight:700">No stories match that search. Try a different word.</p>
