@@ -102,6 +102,17 @@ article, .card{scroll-margin-top:200px}
 <button class="tab" data-cat="New York" aria-selected="false">New York</button>
 </nav>
 <div class="ad" role="complementary" aria-label="Advertisement"><small>Advertisement · Leaderboard 728×90</small><b>YOUR AD HERE</b><span>AdSense connected (ca-pub-…8022) — units appear once slot IDs are added &amp; Google approves trichomezone.com.</span><br><a href="#" data-goto="advertise">Advertise with us →</a></div>
+
+<div class="panel" id="newsletter" style="border:2px solid #111;background:#ffffff;padding:20px;margin:20px 0">
+<h2 style="margin:0 0 6px">📬 Trichome Zone News Letter</h2>
+<p style="margin:0 0 12px">Get the week's cannabis industry news in your inbox. Type your email below to sign up for the news letter.</p>
+<form id="nlForm" onsubmit="event.preventDefault();var e=document.getElementById('nlEmail').value;window.location.href='mailto:sean.ofriel@aol.com?subject=Trichome Zone news letter signup&body=Please add this email to the Trichome Zone news letter: '+encodeURIComponent(e);document.getElementById('nlDone').style.display='block';">
+<input id="nlEmail" type="email" required placeholder="Your email address" style="padding:12px;border:2px solid #111;border-radius:999px;width:100%;max-width:360px">
+<button class="btn" type="submit" style="margin-top:10px">Sign up</button>
+</form>
+<p id="nlDone" style="display:none;font-weight:700;margin-top:10px">Thanks — your signup email is on its way. The news letter itself is coming soon.</p>
+<p style="font-size:13px;color:#222">No spam, just the news. You can unsubscribe anytime.</p>
+</div>
 <div class="searchrow"><input id="q" type="search" placeholder="Search headlines… e.g. hemp, Germany, stocks, heart" aria-label="Search headlines"><button class="btn alt" id="clearQ">Clear</button></div>
 <h2 id="sectionTitle" style="font-family:Georgia,'Times New Roman',serif;font-size:28px;margin:18px 0 4px">Latest News</h2><div id="feed"></div>
 <p id="empty" style="display:none;font-weight:700">No stories match that search. Try a different word.</p>
