@@ -199,11 +199,11 @@ function render(){
  var f=document.getElementById('feed'); var html="";
  if(list.length){
    var lead=list[0];
-   html+='<article class="lead"><span class="chip">'+esc(lead.c)+'</span><h1>'+esc(lead.t)+'</h1><p style="color:var(--muted);line-height:1.6">'+esc(lead.x)+'</p><p class="meta">'+esc(lead.s)+' · '+esc(lead.d)+'</p>'+(lead.o?'<a class="read" href="#" data-goto="article-hemp-ban">Read the full article →</a>':'<a class="read" href="'+lead.u+'" target="_blank" rel="noopener">Read at '+esc(lead.s)+' →</a>')+'</article>';
+   html+='<article class="lead"><span class="chip">'+esc(lead.c)+'</span><h1>'+esc(lead.t)+'</h1><p style="color:var(--muted);line-height:1.6">'+esc(lead.x)+'</p><p class="meta">'+esc(lead.s)+' · '+esc(lead.d)+'</p><a class="read" href="'+lead.u+'" target="_blank" rel="noopener">Read at '+esc(lead.s)+'</a></article>';
    html+='<div class="ad" role="complementary" aria-label="Advertisement"><small>Advertisement · Sponsor Spotlight</small><b>YOUR AD HERE</b><a href="#" data-goto="advertise">Become a sponsor →</a></div>';
    html+='<div class="grid">';
    list.slice(1).forEach(function(s,i){
-     html+='<article class="card"><span class="chip">'+esc(s.c)+'</span><h3>'+esc(s.t)+'</h3><p>'+esc(s.x)+'</p><p class="meta">'+esc(s.s)+' · '+esc(s.d)+'</p>'+(s.o?'<a class="read" href="#" data-goto="article-hemp-ban">Read the full article →</a>':'<a class="read" href="'+s.u+'" target="_blank" rel="noopener">Read at '+esc(s.s)+' →</a>')+'</article>';
+     html+='<article class="card"><span class="chip">'+esc(s.c)+'</span><h3>'+esc(s.t)+'</h3><p>'+esc(s.x)+'</p><p class="meta">'+esc(s.s)+' · '+esc(s.d)+'</p><a class="read" href="'+s.u+'" target="_blank" rel="noopener">Read at '+esc(s.s)+'</a></article>';
      if((i+1)%6===0){html+='</div><div class="ad" role="complementary" aria-label="Advertisement"><small>Advertisement · In-Feed 300×250</small><b>YOUR AD HERE</b><a href="#" data-goto="advertise">Advertise with us →</a></div><div class="grid">';}
    });
    html+='</div>';
