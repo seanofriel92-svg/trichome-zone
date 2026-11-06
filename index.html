@@ -87,6 +87,29 @@ article, .card{scroll-margin-top:20px}
 .ad.house-ad{background:#ede9fe;border:2px dashed #7c3aed;box-shadow:4px 4px 0 #7c3aed}
 .ad.house-ad small{color:#4c1d95}
 .ad.house-ad b{color:#4c1d95}
+
+/* TIGHT LIST layout (approved Nov 5, 2026 — ported from preview) */
+.tri{flex:0 0 36px;width:36px;height:36px;border-radius:9px;background:#ede9fe;border:1px solid #7c3aed;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.tri svg{width:22px;height:27px;display:block}
+.tri-hero{background:rgba(255,255,255,.92);border-color:rgba(255,255,255,.6);vertical-align:-10px;margin:0 8px 0 0}
+.hero-lead{position:relative;border-radius:14px;overflow:hidden;margin:10px 0 4px;display:block;text-decoration:none;background:#0e3d20}
+.hero-lead img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:25% 35%}
+.hero-lead .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,30,15,.08) 30%,rgba(8,30,15,.88) 88%)}
+.hero-lead .inner{position:relative;padding:74px 18px 14px;color:#fff}
+.hero-lead .chip{display:inline-block;background:#7c3aed;color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:4px 9px;border-radius:5px}
+.hero-lead h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(21px,5vw,31px);line-height:1.18;margin:8px 0 6px;color:#fff}
+.hero-lead p{margin:0 0 8px;font-size:14.5px;line-height:1.45;color:#e7f5e0;max-width:62ch;font-family:'Inter',system-ui,sans-serif}
+.hero-lead .byline{font-size:12.5px;color:#bbf7d0;font-weight:600}
+.story{display:flex;gap:11px;align-items:flex-start;text-decoration:none;padding:8px 2px 9px;border-bottom:1px solid var(--line);color:inherit}
+.story-body{flex:1;min-width:0}
+.story:hover h3{color:#15803d}
+.story .meta{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin:0 0 3px;color:#222222}
+.story .meta .cat-us{color:#14532d} .story .meta .cat-biz{color:#7a5c00}
+.story .meta .cat-intl{color:#0e7490} .story .meta .cat-sci{color:#be185d}
+.story .meta .cat-ny{color:#1d4ed8} .story .meta .cat-orig{color:#7c3aed}
+.story .meta .when{color:#555555;font-weight:500;letter-spacing:.02em;text-transform:none}
+.story h3{font-family:Georgia,'Times New Roman',serif;font-size:18.5px;line-height:1.27;margin:0 0 2px;font-weight:700;color:#111111}
+.story .sum{margin:0;font-size:13.5px;line-height:1.4;color:#222222;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;font-family:'Inter',system-ui,sans-serif}
 </style>
 </head>
 <body>
@@ -112,6 +135,9 @@ article, .card{scroll-margin-top:20px}
 <div style="color:#e9d5ff;font-size:14px">The federal total-THC change and 0.4 mg per-container cap take effect Dec 11, 2026.</div>
 </div>
 <script>(function(){function u(){var d=new Date('2026-12-11T00:00:00-05:00')-new Date();var days=Math.max(0,Math.ceil(d/86400000));var el=document.getElementById('hempDays');if(el)el.textContent=days+' days to go';}u();setInterval(u,3600000);})();</script>
+<div class="searchrow"><input id="q" type="search" placeholder="Search headlines… e.g. hemp, Germany, stocks, heart" aria-label="Search headlines"><button class="btn alt" id="clearQ">Clear</button></div>
+<h2 id="sectionTitle" style="font-family:Georgia,'Times New Roman',serif;font-size:28px;margin:18px 0 4px">Latest News</h2><div id="heroSlot"></div><div id="feed"></div>
+<p id="empty" style="display:none;font-weight:700">No stories match that search. Try a different word.</p>
 <div class="ad house-ad" role="complementary" aria-label="Advertisement"><small>Advertisement · Trichome Zone</small><img src="favicon.png" alt="Trichome Zone sprout" style="width:48px;height:48px;vertical-align:middle;margin-right:8px"><b>TRICHOME ZONE — Daily cannabis industry news, US &amp; worldwide</b><span>Love the news here? Share trichomezone.com with a friend who follows cannabis.</span><br><a href="https://trichomezone.com/" target="_blank" rel="noopener">Share trichomezone.com →</a> · <a href="#" data-goto="advertise">Advertise with us →</a></div>
 
 <div class="panel" id="newsletter" style="border:2px solid #c9a227;background:#fff8e1;padding:20px;margin:20px 0">
@@ -124,9 +150,6 @@ article, .card{scroll-margin-top:20px}
 <p id="nlDone" style="display:none;font-weight:700;margin-top:10px">Thanks — your signup email is on its way. The news letter itself is coming soon.</p>
 <p style="font-size:13px;color:#111111">No spam, just the news. You can unsubscribe anytime.</p>
 </div>
-<div class="searchrow"><input id="q" type="search" placeholder="Search headlines… e.g. hemp, Germany, stocks, heart" aria-label="Search headlines"><button class="btn alt" id="clearQ">Clear</button></div>
-<h2 id="sectionTitle" style="font-family:Georgia,'Times New Roman',serif;font-size:28px;margin:18px 0 4px">Latest News</h2><div id="feed"></div>
-<p id="empty" style="display:none;font-weight:700">No stories match that search. Try a different word.</p>
 </div>
 
 <!-- ADVERTISE -->
@@ -226,26 +249,39 @@ var STORIES=[{t:"How the Federal Hemp Ban Will Directly Affect the Other Parts o
 {t:"New York OCM Issues Correction on Dispensary Proximity to Schools",s:"vicentellp.com",c:"New York",d:"Nov 5, 2026",x:"New York's Office of Cannabis Management corrected its guidance on the 500-foot school buffer: distance is measured from the dispensary entrance to the nearest point on the school property line, affecting 47 pending applicants and 105 licensed dispensaries.",u:"https://vicentellp.com/insights/new-york-state-ocm-issues-correction-on-dispensary-proximity-to-schools/"}];
 var cat="All";
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+var TRI='<span class="tri" aria-hidden="true"><svg viewBox="0 0 24 30" fill="none"><circle cx="12" cy="9" r="7.2" fill="#c084fc" stroke="#7c3aed" stroke-width="1.7"/><circle cx="9.4" cy="6.2" r="2.1" fill="#fff" opacity=".85"/><path d="M12 16.2v10.3" stroke="#14532d" stroke-width="3.2" stroke-linecap="round"/><path d="M8.6 26.8h6.8" stroke="#14532d" stroke-width="2.4" stroke-linecap="round"/></svg></span>';
+var TRI_HERO='<span class="tri tri-hero" aria-hidden="true"><svg viewBox="0 0 24 30" fill="none"><circle cx="12" cy="9" r="7.2" fill="#c084fc" stroke="#7c3aed" stroke-width="1.7"/><circle cx="9.4" cy="6.2" r="2.1" fill="#fff" opacity=".85"/><path d="M12 16.2v10.3" stroke="#14532d" stroke-width="3.2" stroke-linecap="round"/><path d="M8.6 26.8h6.8" stroke="#14532d" stroke-width="2.4" stroke-linecap="round"/></svg></span>';
+function shortCat(c){return {"US Policy & Regulation":["US POLICY","cat-us"],"Business & Markets":["BUSINESS & MARKETS","cat-biz"],"International":["INTERNATIONAL","cat-intl"],"Science & Health":["SCIENCE & HEALTH","cat-sci"],"New York":["NEW YORK","cat-ny"],"Original Articles":["ORIGINAL ARTICLES","cat-orig"]}[c]||[c.toUpperCase(),"cat-us"]}
+function storyRow(s){
+  var sc=shortCat(s.c);
+  var body='<span class="story-body"><p class="meta"><span class="'+sc[1]+'">'+esc(sc[0])+'</span> <span class="when">/ '+esc(s.d)+' · '+esc(s.s)+'</span></p><h3>'+esc(s.t)+'</h3><p class="sum">'+esc(s.x)+'</p></span>';
+  if(s.o){return '<a class="story" href="#" data-goto="article-hemp-ban">'+TRI+body+'</a>';}
+  return '<a class="story" href="'+s.u+'" target="_blank" rel="noopener">'+TRI+body+'</a>';
+}
 function render(){
  var q=document.getElementById('q').value.trim().toLowerCase();
  var list=STORIES.filter(function(s){return (cat==="All"||s.c===cat)&&(!q||(s.t+" "+s.x+" "+s.s).toLowerCase().indexOf(q)>-1)});
- var f=document.getElementById('feed'); var html="";
- if(list.length){
-   var lead=list[0];
-   html+='<article class="lead"><span class="chip">'+esc(lead.c)+'</span><h1>'+esc(lead.t)+'</h1><p style="color:var(--muted);line-height:1.6">'+esc(lead.x)+'</p><p class="meta">'+esc(lead.s)+' · '+esc(lead.d)+'</p>'+(lead.o?'<a class="read" href="#" data-goto="article-hemp-ban">Read the full article →</a>':'<a class="read" href="'+lead.u+'" target="_blank" rel="noopener">Read at '+esc(lead.s)+' →</a>')+'</article>';
-   html+='<div class="ad house-ad" role="complementary" aria-label="Advertisement"><small>Advertisement · Trichome Zone</small><img src="favicon.png" alt="Trichome Zone sprout" style="width:48px;height:48px;vertical-align:middle;margin-right:8px"><b>Never miss a story — share Trichome Zone</b><a href="https://trichomezone.com/" target="_blank" rel="noopener">Share trichomezone.com →</a></div>';
-   html+='<div class="grid">';
-   list.slice(1).forEach(function(s,i){
-     html+='<article class="card"><span class="chip">'+esc(s.c)+'</span><h3>'+esc(s.t)+'</h3><p>'+esc(s.x)+'</p><p class="meta">'+esc(s.s)+' · '+esc(s.d)+'</p>'+(s.o?'<a class="read" href="#" data-goto="article-hemp-ban">Read the full article →</a>':'<a class="read" href="'+s.u+'" target="_blank" rel="noopener">Read at '+esc(s.s)+' →</a>')+'</article>';
-     if((i+1)%6===0){html+='</div><div class="ad house-ad" role="complementary" aria-label="Advertisement"><small>Advertisement · Trichome Zone News Letter</small><img src="favicon.png" alt="Trichome Zone sprout" style="width:48px;height:48px;vertical-align:middle;margin-right:8px"><b>Get the week\'s cannabis news in your inbox</b><a href="#" data-goto="home">Sign up for the News Letter →</a></div><div class="grid">';}
-   });
-   html+='</div>';
+ var orig=list.filter(function(s){return s.o})[0];
+ var showHero=!!orig&&(cat==="All"||cat==="Original Articles")&&!q;
+ var rows=showHero?list.filter(function(s){return !s.o}):list;
+ var hero="";
+ if(showHero){
+   hero='<a class="hero-lead" href="#" data-goto="article-hemp-ban"><img class="bg" src="images/photo-1.jpg" alt="Cannabis buds in a jar"><div class="shade"></div><div class="inner">'+TRI_HERO+'<span class="chip">Original Article · Trichome Zone</span><h1>'+esc(orig.t)+'</h1><p>'+esc(orig.x)+'</p><span class="byline">By Sean O\'Friel · '+esc(orig.d)+' · Read on Trichome Zone →</span></div></a>';
+   hero+='<div class="ad house-ad" role="complementary" aria-label="Advertisement"><small>Advertisement · Trichome Zone</small><img src="favicon.png" alt="Trichome Zone sprout" style="width:48px;height:48px;vertical-align:middle;margin-right:8px"><b>Never miss a story — share Trichome Zone</b><a href="https://trichomezone.com/" target="_blank" rel="noopener">Share trichomezone.com →</a></div>';
  }
- document.getElementById('sectionTitle').textContent = (cat==='All' ? 'Latest News' : cat); f.innerHTML=html;
- document.getElementById('empty').style.display=list.length?"none":"block";
+ var html="";
+ rows.forEach(function(s,i){
+   html+=storyRow(s);
+   if(i===5){html+='<div class="ad house-ad" role="complementary" aria-label="Advertisement"><small>Advertisement · Trichome Zone News Letter</small><img src="favicon.png" alt="Trichome Zone sprout" style="width:48px;height:48px;vertical-align:middle;margin-right:8px"><b>Get the week\'s cannabis news in your inbox</b><a href="#" data-goto="home">Sign up for the News Letter →</a></div>';}
+ });
+ document.getElementById('heroSlot').innerHTML=hero;
+ document.getElementById('sectionTitle').textContent = (cat==='All' ? 'Latest News' : cat);
+ document.getElementById('feed').innerHTML=html;
+ document.getElementById('empty').style.display=(rows.length||showHero)?"none":"block";
  bindGoto();
 }
 function show(view){
+
  document.querySelectorAll('.view').forEach(function(v){v.classList.remove('active')});
  document.getElementById('view-'+view).classList.add('active');
  document.querySelectorAll('#mainNav .tab').forEach(function(t){t.setAttribute('aria-selected',t.dataset.view===view?"true":"false")});
