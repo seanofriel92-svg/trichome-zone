@@ -301,7 +301,7 @@ function render(){
  var list=STORIES.filter(function(s){return (cat==="All"||s.c===cat)&&(!q||(s.t+" "+s.x+" "+s.s).toLowerCase().indexOf(q)>-1)});
  var orig=list.filter(function(s){return s.o})[0];
  var showHero=!!orig&&(cat==="All"||cat==="Original Articles")&&!q;
- var rows=showHero?list.filter(function(s){return !s.o}):list;
+ var rows=showHero?list.filter(function(s){return !s.o||s!==orig}):list;
  var hero="";
  if(showHero){
    hero='<a class="hero-lead" href="#" data-goto="article-hemp-ban"><img class="bg" src="images/photo-1.jpg" alt="Cannabis buds in a jar"><div class="shade"></div><div class="inner">'+TRI_HERO+'<span class="chip">Original Article · Trichome Zone</span><h1>'+esc(orig.t)+'</h1><p>'+esc(orig.x)+'</p><span class="byline">By Sean O\'Friel · '+esc(orig.d)+' · Read on Trichome Zone →</span></div></a>';
