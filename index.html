@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- off-white background (#FAF8F2) + Categories dropdown button, search bar removed -->
+<!-- darker grey background (#D2D2D2) + Categories dropdown button, search bar removed -->
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -14,8 +14,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --bg:#FAF8F2;
-    --bg-soft:#F3EEE1;
+    --bg:#D2D2D2;
+    --bg-soft:#C4C4C4;
     --panel:#FFFFFF;
     --panel-2:#F1EDE2;
     --ink:#1B2A1E;
@@ -40,8 +40,8 @@
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --bg:#FAF8F2;
-      --bg-soft:#F3EEE1;
+      --bg:#D2D2D2;
+      --bg-soft:#C4C4C4;
       --panel:#FFFFFF;
       --panel-2:#F1EDE2;
       --ink:#1B2A1E;
@@ -149,8 +149,8 @@
   .story{
     display:flex;gap:14px;padding:20px 10px;border-bottom:1px solid var(--line);border-radius:8px;
   }
-  .story:hover{background:#F1EDE2}
-  @media (prefers-color-scheme: dark){ .story:hover{background:#F1EDE2} }
+  .story:hover{background:#E2E2E2}
+  @media (prefers-color-scheme: dark){ .story:hover{background:#E2E2E2} }
   .story .badge{flex:none;padding-top:3px}
   .story .meta{font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--amber-ink)}
   .story .meta .src{color:#C8102E;font-weight:700;text-transform:none;letter-spacing:0}
@@ -572,28 +572,12 @@
     </div>
 
     <aside class="side-col">
-      <div class="box nl-box" id="newsletterBox">
-        <h2>Trichome Zone News Letter</h2>
-        <p>The week's top 5 cannabis stories, every Friday. Free — sign up and the first issue lands in your inbox.</p>
-        <form class="nl-form" id="nlForm">
-          <input type="email" id="nlEmail" required placeholder="Your email address" aria-label="Your email address" />
-          <button type="submit">Sign up</button>
-        </form>
-        <p class="nl-done" id="nlDone"></p>
-      </div>
-
       <div class="ad">
         <div class="ad-label">Advertisement · Trichome Zone</div>
         <div class="ad-title">The hemp deadline is coming</div>
         <p>December 11, 2026 changes what can be sold across the whole industry. Trichome Zone is counting it down, every day.</p>
       </div>
 
-      <div class="box">
-        <h2>Start with our originals</h2>
-        <p>Written here at Trichome Zone — the federal hemp ban's knock-on effects, and the whole story of New York's legal market so far. Read them both here.</p>
-        <p style="margin:0"><button class="backbtn" id="openHemp">Read the hemp-ban article</button></p>
-        <p style="margin:10px 0 0"><button class="backbtn" id="openNY">Read the New York article</button></p>
-      </div>
     </aside>
   </div>
 
@@ -628,6 +612,18 @@
         <li><b>Canopy Growth's international revenue jumps 141%.</b><span>CA$81.4 million in quarterly revenue on strong medical demand in Germany and Poland.</span></li>
         <li><b>New York consumption lounges still aren't licensed.</b><span>Authorized in 2021, still not issued — no state-licensed lounge is operating yet.</span></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="block" id="newsletterBottom">
+    <div class="box nl-box" id="newsletterBox" style="max-width:640px;margin:0 auto;text-align:center">
+      <h2>Trichome Zone News Letter</h2>
+      <p>The week's top 5 cannabis stories, every Friday. Free — sign up and the first issue lands in your inbox.</p>
+      <form class="nl-form" id="nlForm">
+        <input type="email" id="nlEmail" required placeholder="Your email address" aria-label="Your email address" />
+        <button type="submit">Sign up</button>
+      </form>
+      <p class="nl-done" id="nlDone"></p>
     </div>
   </section>
 
@@ -749,7 +745,7 @@
 
   var INFED_AD = '<div class="ad infeed"><div class="ad-label">Advertisement · Trichome Zone</div>'
     + '<div class="ad-title">Get the top 5 stories every Friday</div>'
-    + '<p>The Trichome Zone News Letter is free — <a href="#newsletterBox">sign up in the box above</a> and never miss the hemp deadline news.</p></div>';
+    + '<p>The Trichome Zone News Letter is free — <a href="#newsletterBox">sign up in the box below</a> and never miss the hemp deadline news.</p></div>';
 
   
 
@@ -1013,8 +1009,8 @@
     document.getElementById('layout').style.display = '';
     
   }
-  document.getElementById('openHemp').addEventListener('click', function(){ openArticle(1); });
-  document.getElementById('openNY').addEventListener('click', function(){ openArticle(2); });
+  var _oh=document.getElementById('openHemp'); if(_oh){_oh.addEventListener('click', function(){ openArticle(1); });}
+  var _on=document.getElementById('openNY'); if(_on){_on.addEventListener('click', function(){ openArticle(2); });}
 
   /* News Letter signup \u2014 opens an email to the site, like the live box */
   document.getElementById('nlForm').addEventListener('submit', function(e){
